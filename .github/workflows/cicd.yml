@@ -7,6 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      # - uses: actions/setup-node@v1
 
-      - name: Run a one-line script
-        run: echo "Hello, world!"
+      - name: Install
+        run: npm Install
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run dev-build
